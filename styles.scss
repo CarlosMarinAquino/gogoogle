@@ -1,0 +1,171 @@
+//color
+$color-link: #525252;
+$button-color:#efeff0;
+$footer-color:#f1f1f1;
+$border-color:#5c5757;
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+//general
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-size: clamp(1rem, 1vw, 1.2rem);
+  line-height: 1.5em;
+  font-family: 'Roboto', sans-serif;
+  min-height: auto;
+}
+a:hover{
+text-decoration: underline;
+}
+//elements
+nav {
+  display: flex;
+  justify-content: end;
+  flex-direction: row;
+  align-items: center;
+  margin-block-start: 1rem;
+  margin-inline-end: 2rem;
+}
+
+.lnknav {
+  color: $color-link ;
+  text-decoration: none;
+  margin-inline-end: 1rem;
+
+}
+
+.nav-dots {
+  margin-inline-start: 1rem;
+  margin-inline-end: 1rem;
+
+  img {
+    width:30px;
+  }
+}
+
+.nav-pfl {
+  img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+
+.ctnr-logo {
+  margin: 3rem auto 0;
+}
+#logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  width: auto;
+}
+
+.campos {
+  margin-block-start: 1em;
+  margin-block-end: 1rem;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  height: auto;
+  border-radius: 15px
+}
+input{
+  height: 35px;
+  border-radius: 15px;
+  width: 50vw;
+  max-width: 75vw;
+  min-width: 300px;
+
+}
+input:hover{
+  border: 2px solid #529cfc;
+}
+i {
+  padding: 10px;
+  min-width: 40px;
+}
+.campos i {
+  position: absolute;
+}
+
+
+.dosbotones {
+  align-items: center;
+  align-content: center;
+}
+
+button {
+  margin-inline-end: 1rem;
+  border-radius: 5px;
+  background-color: $button-color;
+  color: $color-link;
+}
+
+button:hover{
+  border: 2px solid $border-color;
+}
+.btn-imput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ofrecido{
+  a{
+    text-decoration: none;
+  }
+  a:hover {
+      text-decoration: underline;
+    }
+}
+
+footer{
+display: flex;
+flex-direction: column;
+height: 20vh;
+background-color: $footer-color;
+
+}
+.pais{
+  border-bottom: 1px solid rgba($color: #7a7a7a, $alpha: 0.3);
+  margin-inline-start: 1rem;
+  margin-inline-end: 2rem;
+}
+#morelinks{
+  margin-top: 1rem;
+  margin-inline-start: 1rem;
+  margin-inline-end: 2rem;
+    font-size: smaller;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    a {
+      text-decoration: none;
+      color: $color-link;
+      margin-inline-end: 0.75rem;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+}
+
+
+//Media Querys
+@media (min-width: 300px) and (max-width: 525px) {
+#morelinks {
+  width: fit-content;
+  font-size: xx-small;
+}
+}
